@@ -1,0 +1,7 @@
+{
+  "name": "TokoLaris.vue",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue-vite"
+}
