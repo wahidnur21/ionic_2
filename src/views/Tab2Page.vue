@@ -15,25 +15,28 @@
 
       <ion-list>
 
-        <ion-item v-for="item in data" lines="full" class="ion-activatable ripple-parent">
+        <ion-item @click="add(item)" v-for="item in stuff" lines="full" class="ion-activatable ripple-parent">
           <ion-label>
             <h2>{{ item?.name }}</h2>
             <p>{{ item?.price }}</p>
           </ion-label>
+          <ion-icon aria-hidden="true" :icon="addCircle" slot="end"></ion-icon>
           <ion-ripple-effect></ion-ripple-effect>
         </ion-item>
-      </ion-list>
 
+      </ion-list>
 
     </ion-content>
   </ion-page>
 </template>
 
 <script setup lang="ts">
-import { axios } from '../services/axios';
+import { axios } from '@/services/axios';
 import { onMounted, ref } from 'vue';
+import { stuff } from "@/services/stuff";
+import { addCircle } from "ionicons/icons";
+import { cart } from "@/services/cart";
 
-const data = ref<any[]>([])
 
 onMounted(() => {
   axios.get('stuffs')
@@ -41,12 +44,26 @@ onMounted(() => {
     const isError = result.data.isError
     const value = result.data.value
 
-    data.value = value
+    stuff.value = value
   }).catch(error => {
 
   }).finally(() => {
 
   })
+
 })
+
+const add = (item:any) => {
+  
+  if (item) {
+    cart.value.stuffs?.push({
+      id: item.id,
+      name: item.name,
+      price: item.price,
+      count: 1,
+      unit: item.unit,
+    })
+  }
+}
 
 </script>

@@ -35,8 +35,8 @@
 
 <script setup lang="ts">
 import { ref } from "vue";
-import { axios } from "../../services/axios";
-import { token, user, TUser } from "../../services/user"
+import { axios } from "@/services/axios";
+import { token, user, TUser } from "@/services/user"
 import { useRouter } from "vue-router";
 
 const email = ref ('bambang@bambang.com')

@@ -1,4 +1,4 @@
-import { user } from "../..services/user";
+import { user } from "../../services/user";
 
 export const isNotLogin = (to: any, from: any) => {
 

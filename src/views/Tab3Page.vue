@@ -72,7 +72,7 @@ const logout = () => {
 
 <style>
 .head {
-  background-color: red;
+  background-color: blue;
   padding: 40px 10px;
 }
 ion-avatar {
