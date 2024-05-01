@@ -6,5 +6,5 @@ export const isNotLogin = (to: any, from: any) => {
         return true;
     }
     
-    return { path: 'login' }
+    return { path: "/tabs/tab1" };
 }

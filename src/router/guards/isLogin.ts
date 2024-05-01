@@ -5,5 +5,5 @@ export const isLogin = (to: any, from: any) => {
     if(user.value) {
         return true;
     }
-    return { path: 'login' }
+    return { path: 'login' };
 }
