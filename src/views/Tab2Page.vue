@@ -32,7 +32,7 @@
 
 <script setup lang="ts">
 import { axios } from '@/services/axios';
-import { onMounted, ref } from 'vue';
+import { onMounted, ref } from "vue";
 import { stuff } from "@/services/stuff";
 import { addCircle } from "ionicons/icons";
 import { cart } from "@/services/cart";

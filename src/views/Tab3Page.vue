@@ -57,7 +57,7 @@
 
 <script setup lang="ts">
 import { personCircleOutline, logOut } from 'ionicons/icons';
-import { token, user } from "../services/user";
+import { token, user } from "@/services/user";
 import { useRouter } from 'vue-router';
 
 const router = useRouter()

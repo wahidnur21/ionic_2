@@ -198,7 +198,7 @@ function paintBoundingBox(detectedCodes:any, ctx:any) {
     } = detectedCode
 
     ctx.lineWidth = 2
-    ctx.StrokeStyle = '#007bff'
+    ctx.strokeStyle = '#007bff'
     ctx.strokeRect(x, y, width, height) 
   }
 }

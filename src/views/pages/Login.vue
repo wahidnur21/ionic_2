@@ -39,7 +39,7 @@ import { axios } from "@/services/axios";
 import { token, user, TUser } from "@/services/user"
 import { useRouter } from "vue-router";
 
-const email = ref ('bambang@bambang.com')
+const email = ref ('ihsan@nur.com')
 const password =ref ('123')
 const router = useRouter()
 
